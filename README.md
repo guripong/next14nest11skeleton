@@ -24,7 +24,31 @@
 - ✅ Local HTTPS support via self-signed certs (`cert/localhost/`)
 - ✅ Auto-generates API route documentation with `npm run doc`
 
----
+## 🔄 Routing Architecture Diagram
+
+```
+         🔵 Client (Browser Request)
+                    │
+                    ▼
+          ┌───────────────────────┐
+          │      Express.js       │  ← Unified entry point
+          └───────────────────────┘
+                    │
+         ┌──────────┴──────────┐
+         ▼                     ▼
+ ┌─────────────────┐     ┌─────────────────┐
+ │   Next.js 14    │     │    NestJS 11    │
+ │   (App Router)  │     │   (API Layer)   │
+ └─────────────────┘     └─────────────────┘
+         │                     │
+         ▼                     ▼
+     📄 SSR/CSR Pages       🔧 API Logic
+     (e.g. /login)         (e.g. /api/user)
+```
+
+> 💡 Only paths defined in Next.js will be routed to Next.  
+> All other requests are handled by NestJS.  
+> The system runs on a single port and supports local HTTPS.
 
 ## 🚀 Folder Structure (Simplified)
 
