@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "jsx": "preserve",
+    "allowJs": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "module": "CommonJS",
+    "declaration": false,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2021",
+    "sourceMap": false,
+    "outDir": "./dist/nest",
+    "baseUrl": "./",
+    "paths": {
+      "@/modules/*":["./src/modules/*"],
+      "@/*": ["./src/*"],
+
+    },
+    "resolveJsonModule": true,
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "noFallthroughCasesInSwitch": false,
+    "esModuleInterop": true //이걸 해야 그냥 import morgan 가능
+    ,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "noEmit": false,
+    "isolatedModules": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+, "src/deleteplease/pages.controller.ts..back", "src/deleteplease/pages.module.ts.back"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

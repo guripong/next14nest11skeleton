@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "🔧 Husky pre-commit hook running..."
+npx lint-staged

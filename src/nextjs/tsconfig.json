@@ -1,0 +1,43 @@
+{
+  // "extends":"../../tsconfig.json",
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext", "es2020"],
+    "target": "ES2020", // ✅ es2015 이상으로 설정
+    "downlevelIteration": true, // ✅ 이터레이터 문제 해결
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["../../src/*"],
+      "@/nextjs/*": ["../../src/nextjs/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "../../src/common/**/*.ts",
+    "../../src/modules/*/dto/**/*.ts",
+    "../../.next/types/**/*.ts",
+    "../../dist/nest/.next/types/**/*.ts"
+    // "../../dist/nest/.next/types/**/*.ts",
+  ],
+  "exclude": ["node_modules"]
+}

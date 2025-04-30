@@ -1,0 +1,8 @@
+node_modules
+dist
+.next
+.git
+.vscode
+*.log
+*.md
+.husky
